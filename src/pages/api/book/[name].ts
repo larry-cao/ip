@@ -14,10 +14,10 @@ export const config = {
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   // const { searchParams } = new URL(req.url)
   // const email = searchParams.get('email')
-  const { id, name } = req.query
+  const { name } = req.query
   const { data, error } = await supabase
   .from('book')
-  .insert({ id: id, name: name })
+  .insert({ name: name })
   if (error) {
     res.status(200).json({ message: `insert book error!` + error})
   } else {
