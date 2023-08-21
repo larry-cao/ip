@@ -68,4 +68,4 @@ const del = async (req: NextRequest) => {
   
 };
 
-export default {find,insert, update, del}
+export {find, insert, update, del}
