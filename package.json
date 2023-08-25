@@ -8,19 +8,33 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "browserslist": "defaults, not ie <= 11",
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@headlessui/tailwindcss": "^0.2.0",
     "@supabase/supabase-js": "^2.32.0",
+    "@tailwindcss/forms": "^0.5.3",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "clsx": "^1.2.1",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
     "next": "13.4.16",
+    "node-fetch": "^3.3.2",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react18-json-view": "^0.2.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.16",
+    "prettier": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.5.2",
+    "sharp": "^0.32.0"
   }
 }
