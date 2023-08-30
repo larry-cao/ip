@@ -245,7 +245,7 @@ export function Demo() {
   }, [searchKey]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchKey(event.target.value);
+    setSearchKey(event.target.value?.trim());
   };
   return (
     <section
