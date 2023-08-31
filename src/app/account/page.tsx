@@ -37,29 +37,29 @@ export default async function Account() {
   const updateName = async (formData: FormData) => {
     'use server';
 
-    const newName = formData.get('name') as string;
-    const supabase = createServerActionClient<Database>({ cookies });
-    const session = await getSession();
-    const user = session?.user;
-    const { error } = await supabase
-      .from('users')
-      .update({ full_name: newName })
-      .eq('id', user?.id);
-    if (error) {
-      console.log(error);
-    }
+    // const newName = formData.get('name') as string;
+    // const supabase = createServerActionClient<Database>({ cookies });
+    // const session = await getSession();
+    // const user = session?.user;
+    // const { error } = await supabase
+    //   .from('users')
+    //   .update({ full_name: newName })
+    //   .eq('id', user?.id);
+    // if (error) {
+    //   console.log(error);
+    // }
     revalidatePath('/account');
   };
 
   const updateEmail = async (formData: FormData) => {
     'use server';
 
-    const newEmail = formData.get('email') as string;
-    const supabase = createServerActionClient<Database>({ cookies });
-    const { error } = await supabase.auth.updateUser({ email: newEmail });
-    if (error) {
-      console.log(error);
-    }
+    // const newEmail = formData.get('email') as string;
+    // const supabase = createServerActionClient<Database>({ cookies });
+    // const { error } = await supabase.auth.updateUser({ email: newEmail });
+    // if (error) {
+    //   console.log(error);
+    // }
     revalidatePath('/account');
   };
 
