@@ -7,6 +7,7 @@ import type { Database } from '../../../../types_db'
 
 export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url)
+  console.log("=============>auth redirect: " + request.url);
   const code = requestUrl.searchParams.get('code')
 
   if (code) {
@@ -15,6 +16,6 @@ export async function GET(request: NextRequest) {
   }
 
   // URL to redirect to after sign in process completes
-  console.log("=============>auth redirect: "+requestUrl.origin);
+  console.log("=============>auth redirect origin: " + requestUrl.origin);
   return NextResponse.redirect(requestUrl.origin)
 }
